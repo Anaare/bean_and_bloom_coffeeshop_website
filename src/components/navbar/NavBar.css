@@ -100,6 +100,13 @@
   opacity: 0.85;
 }
 
+/* Cart + hamburger group (right side) */
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
 .navbar-cart-btn {
   display: inline-flex;
   align-items: center;
@@ -144,5 +151,78 @@
   }
   100% {
     transform: scale(1);
+  }
+}
+
+/* Hamburger: hidden on desktop */
+.navbar-menu-btn {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-cream);
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 768px) {
+  .navbar-header {
+    padding: 1rem 0;
+  }
+
+  /* when the menu is open on the home page, give the bar a solid background */
+  .navbar-header--open {
+    background-color: var(--color-espresso);
+  }
+
+  .navbar-container {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .navbar-menu-btn {
+    display: inline-flex;
+  }
+
+  /* Smaller logo, kept on one line */
+  .logo-img {
+    height: 36px;
+  }
+
+  .navbar-logo h3:nth-of-type(1) {
+    font-size: 1.05rem;
+    white-space: nowrap;
+  }
+
+  .navbar-logo h3:nth-of-type(2) {
+    white-space: nowrap;
+  }
+
+  .navbar-cart-btn {
+    padding: 0.45rem 0.7rem;
+  }
+
+  /* Links: hidden, then a full-width list below the logo row */
+  .navbar-nav {
+    display: none;
+    order: 3;
+    width: 100%;
+    flex-direction: column;
+    gap: 0;
+    padding-top: 0.5rem;
+  }
+
+  .navbar-nav--open {
+    display: flex;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 0.85rem 0;
+    border-top: 1px solid rgba(245, 238, 229, 0.15);
+    border-bottom: none;
+  }
+
+  .navbar-nav .nav-link:hover,
+  .navbar-nav .nav-link.active {
+    color: var(--color-caramel);
+    border-bottom: none;
   }
 }
