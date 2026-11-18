@@ -1,0 +1,27 @@
+.order-online {
+  flex: 1;
+  padding: 4rem 0;
+}
+
+.order-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+  .order-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .order-online {
+    padding: 2.5rem 0;
+  }
+
+  .order-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
