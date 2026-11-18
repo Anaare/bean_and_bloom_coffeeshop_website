@@ -5,7 +5,7 @@ import Menu from "./pages/menu/Menu.jsx";
 import About from "./pages/about/About.jsx";
 import Contact from "./pages/contact/Contact.jsx";
 import Order__online from "./pages/order__online/Order__online.jsx";
-import Order__confirmation from "./pages/order__confirmation/order__confirmation.jsx";
+import Order__confirmation from "./pages/order__confirmation/Order__confirmation.jsx";
 
 const router = createBrowserRouter([
   {
